@@ -1,0 +1,405 @@
+
+/* General Website Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1c1c1c;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 4px solid #e63946;
+}
+
+header h1 {
+    color: #ff4d5a;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    color: #dddddd;
+    margin: 10px 0 0;
+}
+
+/* Navigation */
+nav {
+    background-color: #242424;
+    padding: 12px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
+    background-color: #e63946;
+    color: #ffffff;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #222222;
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #ff4d5a;
+    margin-top: 0;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+/* Buttons */
+.btn,
+button {
+    display: inline-block;
+    background-color: #c92130;
+    color: #ffffff;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover,
+button:hover {
+    background-color: #a81927;
+}
+
+/* Featured Section */
+.featured {
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #242424;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1 1 250px;
+    text-align: left;
+}
+
+.card h3 {
+    color: #ff5a66;
+}
+
+.card a {
+    color: #ff858e;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #ffffff;
+}
+
+/* Accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #ffcc00;
+    outline-offset: 3px;
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid #e63946;
+}
+
+footer p {
+    margin: 0;
+    color: #cccccc;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 35px 20px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 8px;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+}
+
+/* Performance Upgrades Table */
+.table-container {
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #242424;
+    color: #ffffff;
+    text-align: left;
+}
+
+caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    color: #ffffff;
+}
+
+th,
+td {
+    border: 1px solid #555555;
+    padding: 15px;
+}
+
+thead {
+    background-color: #a81927;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #303030;
+}
+
+tbody tr:hover {
+    background-color: #404040;
+}
+
+/* Contact Form */
+.contact-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form {
+    background-color: #242424;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #444444;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #111111;
+    font: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#formResponse {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Form Validation Messages */
+.success {
+    color: #86efac;
+    font-weight: bold;
+}
+
+.error {
+    color: #ff858e;
+    font-weight: bold;
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    margin-top: 20px;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f5f5f5;
+    color: #222222;
+}
+
+body.light-mode header,
+body.light-mode footer {
+    background-color: #eeeeee;
+}
+
+body.light-mode header p,
+body.light-mode footer p {
+    color: #333333;
+}
+
+body.light-mode nav {
+    background-color: #dddddd;
+}
+
+body.light-mode nav a {
+    color: #111111;
+}
+
+body.light-mode nav a:hover,
+body.light-mode nav a:focus-visible,
+body.light-mode nav a[aria-current="page"] {
+    background-color: #a81927;
+    color: #ffffff;
+}
+
+body.light-mode .hero,
+body.light-mode .card,
+body.light-mode form {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+body.light-mode .card {
+    border-color: #bbbbbb;
+}
+
+body.light-mode .card h3,
+body.light-mode .card a,
+body.light-mode .hero h2 {
+    color: #a81927;
+}
+
+body.light-mode .card a:hover {
+    color: #75101b;
+}
+
+/* Build Details Page */
+.back-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+main > .featured + .featured {
+    margin-top: 40px;
+}
+
+/* Photo Gallery */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.gallery-card {
+    background-color: #242424;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-card h3 {
+    color: #ff5a66;
+    margin-bottom: 10px;
+}
+
+.gallery-card p {
+    color: #eeeeee;
+}
+
+body.light-mode .gallery-card {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+body.light-mode .gallery-card p {
+    color: #222222;
+}
